@@ -1,11 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <>
+    <Router>
+      <Routes>
+        <Route path="/" element={<AdminDashboard />} />
+        <Route index element={<AdminDashboard />} />
+        {/* <Route path="contact" element={<Contact />} /> */}
+      </Routes>
+    </Router></>
   );
 }
 
